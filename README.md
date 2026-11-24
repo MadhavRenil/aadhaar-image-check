@@ -1,6 +1,6 @@
 # Aadhaar Image Check
 
-A small Flask application that runs a set of **heuristic image checks** on an
+An application that runs a set of **heuristic image checks** on an
 uploaded Aadhaar-card image. It is an educational screening demo, not an
 identity-verification system or a trained deepfake detector.
 
