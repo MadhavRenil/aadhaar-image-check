@@ -1,8 +1,11 @@
 # Aadhaar Image Check
 
-An application that runs a set of **heuristic image checks** on an
-uploaded Aadhaar-card image. It is an educational screening demo, not an
+An application that runs a set of **heuristic image checks** on an uploaded
+Aadhaar-card image. It is an educational screening demo, not an
 identity-verification system or a trained deepfake detector.
+
+**Live demo:** [Aadhaar Image Check](https://aadhaar-image-check.vercel.app).
+Use synthetic samples only; never upload real Aadhaar cards or numbers.
 
 > **Important:** A score is not a probability, an accuracy measure, or proof
 > that a card is genuine or fake. Do not use this tool to make identity,
@@ -83,10 +86,10 @@ application exposed as `app` in [`app.py`](app.py) and installs dependencies
 from [`requirements.txt`](requirements.txt). The deployed function accepts
 uploads up to 4 MB; local runs allow up to 15 MB.
 
-The deployment is publicly reachable unless you enable Vercel Deployment
-Protection. Do not deploy a public instance for real Aadhaar cards or numbers:
-this demo is not an identity-verification system, and hosting providers may
-process request data. Use synthetic sample images only.
+The hosted demo is publicly reachable unless you enable Vercel Deployment
+Protection. Do not upload real Aadhaar cards or numbers: this demo is not an
+identity-verification system, and hosting providers may process request data.
+Use synthetic sample images only.
 
 ## Privacy and deployment
 
