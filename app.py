@@ -11,6 +11,7 @@ Run:   pip install -r requirements.txt
 CLI:   python app.py card.jpg [123456789012]
 """
 import io
+import os
 import re
 import sys
 
@@ -24,7 +25,9 @@ except ImportError:  # QR check is skipped if OpenCV is missing
     cv2 = None
 
 app = Flask(__name__)
-app.config["MAX_CONTENT_LENGTH"] = 15 * 1024 * 1024  # 15 MB upload limit
+app.config["MAX_CONTENT_LENGTH"] = (
+    4 * 1024 * 1024 if os.environ.get("VERCEL") else 15 * 1024 * 1024
+)
 
 # ---------------------------------------------------------------- Verhoeff
 _D = [[0,1,2,3,4,5,6,7,8,9],[1,2,3,4,0,6,7,8,9,5],[2,3,4,0,1,7,8,9,5,6],
