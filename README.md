@@ -78,12 +78,10 @@ and a reliability warning. Errors return a JSON `error` message.
 ## Deploy to Vercel
 
 Import this project into Vercel from its Git repository, or run `vercel` from
-the project directory and follow the CLI prompts. Vercel uses
-[`api/index.py`](api/index.py) as the Python function entry point,
-[`vercel.json`](vercel.json) to route the app's pages and API through Flask,
-and `requirements.txt` to install dependencies. The deployed function accepts
-uploads up to 4 MB to stay within Vercel's request-body limit; local runs allow
-up to 15 MB.
+the project directory and follow the CLI prompts. Vercel detects the Flask
+application exposed as `app` in [`app.py`](app.py) and installs dependencies
+from [`requirements.txt`](requirements.txt). The deployed function accepts
+uploads up to 4 MB; local runs allow up to 15 MB.
 
 The deployment is publicly reachable unless you enable Vercel Deployment
 Protection. Do not deploy a public instance for real Aadhaar cards or numbers:
