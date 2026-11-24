@@ -77,19 +77,12 @@ sample images for demonstrations.
 
 Successful responses contain the overall score and verdict, a list of checks,
 and a reliability warning. Errors return a JSON `error` message.
-
 ## Deploy to Vercel
 
-Import this project into Vercel from its Git repository, or run `vercel` from
-the project directory and follow the CLI prompts. Vercel detects the Flask
-application exposed as `app` in [`app.py`](app.py) and installs dependencies
-from [`requirements.txt`](requirements.txt). The deployed function accepts
-uploads up to 4 MB; local runs allow up to 15 MB.
+The application is deployed and accessible on Vercel.
 
-The hosted demo is publicly reachable unless you enable Vercel Deployment
-Protection. Do not upload real Aadhaar cards or numbers: this demo is not an
-identity-verification system, and hosting providers may process request data.
-Use synthetic sample images only.
+**Live Website:** [Aadhaar Image Check](https://aadhaar-image-check.vercel.app/)
+
 
 ## Privacy and deployment
 
